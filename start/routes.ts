@@ -23,6 +23,12 @@ import Route from '@ioc:Adonis/Core/Route'
 // HABILITAR CORS
 Route.group(() => {
   Route.resource('/moments', 'MomentsController').apiOnly()
-
   Route.post('/moments/:momentId/comments', 'CommentsController.store')
+  
+  // Novas rotas
+  Route.resource('/users', 'UsersController').apiOnly()
+  Route.get('/auth/:login/:password', 'AuthController.login')
+  Route.get('/auth/test', 'AuthController.test')
+
+  // TODO: expôr a rota para a controller de comentários.
 }).prefix('/api')
