@@ -41,6 +41,7 @@ export default class UsersController {
             .first()
 
         if (user !== null) {
+            user.fullName = body.fullName
             user.login = body.login
             user.password = body.password
             await user.save();
