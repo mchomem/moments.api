@@ -3,9 +3,9 @@ import User from 'App/Models/User'
 
 export default class UsersController {
     public async store({ request, response }: HttpContextContract) {
-        const body = request.body();
+        const body = request.body()
         const user = await User.create(body)
-        response.status(201);
+        response.status(201)
 
         return {
             message: 'User created with successfully',
@@ -13,11 +13,22 @@ export default class UsersController {
         }
     }
 
-    public async index() {
-        const users = await User.query();
+    public async index({ response }) {
+        const users = await User.query()
+        response.status(200)
 
         return {
             data: users
+        }
+    }
+
+    public async show({ params, response }: HttpContextContract) {
+        const user = await User.findOrFail(params.id);
+        response.status(200)
+
+        return {
+            message: 'User finded',
+            data: user
         }
     }
 
@@ -25,7 +36,7 @@ export default class UsersController {
         const user = await User.findOrFail(params.id)
         user.active = false
         await user.save()
-        response.status(200);
+        response.status(200)
 
         return {
             message: 'User deleted',

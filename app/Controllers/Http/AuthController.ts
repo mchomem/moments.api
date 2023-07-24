@@ -25,7 +25,7 @@ export default class AuthController {
 
             return {
                 message: `[${new Date().toLocaleString('pt-BR')}]: Access granted.`,
-                data: { id: user.id, fullName: user.fullName, login: user.login, token: token }
+                data: { id: user.id, full_name: user.fullName, login: user.login, token: token }
             }
         }
         return {
