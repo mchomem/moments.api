@@ -16,7 +16,7 @@ This code is a part of material of course [Matheus Battisti - Hora de codar]
 
 ## Populate database with user
 
-While an automatic routine for populating users (as administrator) in the database, optionally either the SqlLite database can be populated manually (the file) or using Postman, just make a `POST` request to
+While an automatic routine for populating users (such as administrator) in the database is not available, optionally either the SqlLite database can be populated manually (the file) or using Postman, just make a `POST` request to
 
 `http://{server}:{port}/api/users`
 
