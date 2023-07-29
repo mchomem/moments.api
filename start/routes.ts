@@ -30,5 +30,7 @@ Route.group(() => {
   Route.get('/auth/:login/:password', 'AuthController.login')
   Route.get('/auth/test', 'AuthController.test')
 
+  Route.get('/users/get-by-login/:login', 'UsersController.getUserByLogin')
+
   // TODO: expôr a rota para a controller de comentários.
 }).prefix('/api')

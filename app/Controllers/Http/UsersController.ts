@@ -22,6 +22,23 @@ export default class UsersController {
         }
     }
 
+    public async getUserByLogin({ params, response }: HttpContextContract) {
+
+        console.log('test')
+
+        const user = await User
+            .query()
+            .where('login', params.login)
+            .where('active', true)
+            .first()
+        response.status(200)
+
+        return {
+            message: '',
+            data: user
+        }
+    }
+
     public async show({ params, response }: HttpContextContract) {
         const user = await User.findOrFail(params.id);
         response.status(200)
