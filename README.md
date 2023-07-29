@@ -16,17 +16,7 @@ This code is a part of material of course [Matheus Battisti - Hora de codar]
 
 ## Populate database with user
 
-While an automatic routine for populating users (such as administrator) in the database is not available, optionally either the SqlLite database can be populated manually (the file) or using Postman, just make a `POST` request to
-
-`http://{server}:{port}/api/users`
-
-with the following body:  
-
-    {
-		"fullName": "System Administrator",
-		"login": "admin",
-		"password": "admin"
-	}  
+Users can be created by the front-end itself.
 
 # Front-end project  
 
