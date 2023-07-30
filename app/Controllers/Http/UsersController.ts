@@ -34,7 +34,7 @@ export default class UsersController {
         response.status(200)
 
         return {
-            message: '',
+            message: user != null ? 'Found' : 'Not found',
             data: user
         }
     }
