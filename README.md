@@ -1,8 +1,6 @@
 # Moments api rest with Adonis  
 
-This code is a part of material of course [Matheus Battisti - Hora de codar]
-
-(https://github.com/matheusbattisti/curso_adonis_api_yt)
+This code is a part of material of course [Matheus Battisti - Hora de codar](https://github.com/matheusbattisti/curso_adonis_api_yt).
   
 
 ## Steps to install and run  
